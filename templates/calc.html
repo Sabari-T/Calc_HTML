@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <label for = "num_one">Number1: </label>
+    <input type="number" id="num_one" /><br><br>
+    <label for = "num_two">Number2: </label>
+    <input type="number" id="num_two" /><br><br>
+    <button type="submit" style="margin:5px;" onclick="eval_add()">Add(+)</button>
+    <button type="submit" style="margin:5px;" onclick="eval_sub()">Sub(-)</button>
+    <button type="submit" style="margin:5px;" onclick="eval_mul()">Mul(*)</button>
+    <button type="submit" style="margin:5px;" onclick="eval_div()">Div(/)</button><br><br>
+    <label for="output" style="margin:5px;font-size:18pt;">Answer</label>
+    <label id="output" style="margin:5px;font-size:18pt;"/>
+<script>
+    function eval_add(){
+        r=(Number(document.getElementById("num_one").value) + Number(document.getElementById("num_two").value));
+        document.getElementById("output").innerHTML=r;
+    }
+    function eval_sub(){
+        r=(Number(document.getElementById("num_one").value) - Number(document.getElementById("num_two").value));
+        document.getElementById("output").innerHTML=r;
+    }
+    function eval_mul(){
+        r=(Number(document.getElementById("num_one").value) * Number(document.getElementById("num_two").value));
+        document.getElementById("output").innerHTML=r;
+    }
+    function eval_div(){
+        r=(Number(document.getElementById("num_one").value) / Number(document.getElementById("num_two").value));
+        document.getElementById("output").innerHTML=r;
+    }
+</script>
+</body>
+</html>
